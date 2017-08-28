@@ -2,7 +2,7 @@
   <div>
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item title="交易双方信息" name="1">
-        <el-form ref="form" :model="orderDetail" label-width="110px">
+        <el-form ref="form"  label-width="110px">
           <el-row :gutter="20">
             <el-col :span="8">
               <el-form-item label="货主：">
@@ -38,7 +38,7 @@
     </el-collapse>
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item title="收货信息" name="1">
-        <el-form ref="form" :model="orderDetail" label-width="110px">
+        <el-form ref="form"  label-width="110px">
           <el-row :gutter="20">
             <el-col :span="8">
               <el-form-item label="货主：">
