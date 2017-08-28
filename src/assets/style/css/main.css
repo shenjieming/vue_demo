@@ -1,0 +1,50 @@
+.wrapper {
+  /*display: inline-block;*/
+  color: #fafafa;
+  font-size: 14px;
+  width: 100%;
+}
+.kanban_title_count{
+  text-align: center;font-size: 26px;padding: 10px 0
+}
+.kanban_table_tr{
+  background: #1b2a3f;
+  color: #fafafa;
+  font-size: 20px;
+  padding: 14px 0;
+}
+.el-table{
+  border-radius: 4px;
+}
+/*.el-col{*/
+  /*height: 36px;*/
+/*}*/
+.el-collapse-item__header{
+  text-align: left;
+  background: #1b2a3f;
+  color: #fff;
+}
+.el-collapse-item__wrap{
+  padding: 5px;
+}
+.el-form-item{
+  margin: 0px;
+  bottom: 0px;
+}
+.el-row{
+  margin-bottom: 10px;
+}
+.el-input__inner{
+  height: 30px;
+}
+.el-select{
+  width: 100%;
+}
+/* 日期选择器*/
+.el-date-editor--daterange.el-input{
+  width: 100%;
+}
+.detail_counter{
+  float:left;
+  margin:0;
+}
