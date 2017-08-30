@@ -16,6 +16,9 @@
 .el-table{
   border-radius: 4px;
 }
+.el-table tr{
+  cursor:pointer;
+}
 /*.el-col{*/
   /*height: 36px;*/
 /*}*/
@@ -47,4 +50,7 @@
 .detail_counter{
   float:left;
   margin:0;
+}
+.el-collapse-item__content{
+  padding: 0;
 }

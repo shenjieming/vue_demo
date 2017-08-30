@@ -70,10 +70,10 @@
     </el-collapse>
     <el-table :data="orderList"  stripe  border resizable highlight-current-row max-height="500" ref="gridList" @row-click="selectsRow"  @row-dblclick="detail" style="width: 100%">
       <el-table-column
-        label="序"
-        type="index"
-        width="100">
-
+      prop="serial" label="序号"  width="60" align="left">
+        <!--label="序"-->
+        <!--type="index"-->
+        <!--width="100"-->
       </el-table-column>
       <el-table-column prop="sONo" label="订单号" align="center" ></el-table-column>
       <el-table-column label="医院" align="center" >
@@ -170,6 +170,9 @@
         const that=this;
         let httpParams= Object.assign(this.queryParams,this.pagination)
         api.post(API_URL.OMS_API.ORDER.LIST.SALES_MY_ORDER_LIST, httpParams, function (response) {
+          for(let [key,value] of  Object.keys(response.list)){
+            response.list[key].serial=parseInt(key) + parseInt(response.startRow);
+          }
           that.orderList=response.list;
         })
       },
