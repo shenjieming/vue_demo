@@ -1,7 +1,7 @@
 <template>
   <div  >
     <el-breadcrumb separator="/"  style="padding: 5px; font-size: 16px;">
-      <el-breadcrumb-item :to="{ path: '/' }">手术订单</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: 'myorderlist' }">手术订单</el-breadcrumb-item>
       <el-breadcrumb-item>订单详情</el-breadcrumb-item>
       <span style="float: right">
         <el-button type="primary" size="small" @click="$router.back(-1)">上一页</el-button>

@@ -60,9 +60,9 @@
           <!--@click="detail"-->
           <div  class="el-row el-col-24" >
             <div style="float: right">
-              <el-button type="info"  @click="select"  >下单</el-button>
-              <el-button type="info"  @click="detail"   >详情</el-button>
-              <el-button type="danger" @click="cancel" >取消</el-button>
+              <el-button type="info"  @click="create">下单</el-button>
+              <el-button type="info"  @click="detail">详情</el-button>
+              <el-button type="danger" @click="cancel">取消</el-button>
             </div>
           </div>
         </el-form>
@@ -110,7 +110,6 @@
 <script type="text/ecmascript-6">
   import apiCfg from '@/api/apiCfg'
   import API_URL from  '@/api/apiurl'
-  import { Loading } from 'element-ui'
   import messageCFG from '@/common/message/messageCfg'
   import router from "../../router/index";
   const message=new messageCFG();
@@ -201,7 +200,9 @@
         }else {
           message.error("请选择数据!")
         }
-
+      },
+      create:function () {
+        router.push({path:'/myorderlist/createOrder'});
       },
       cancel:function () {
 

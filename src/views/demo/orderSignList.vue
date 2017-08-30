@@ -1,7 +1,7 @@
 <template>
     <div>
-      我的订单详情
-    </div>
+       待签收列表
+  </div>
 </template>
 
 <script type="text/ecmascript-6">

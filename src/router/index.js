@@ -15,9 +15,11 @@ import home from '@/views/home'
 /*引入myOrderList*/
 import dashboard_myOrderList from '@/views/demo/myOrderList'
 /*引入myorderDetail*/
-import dashboard_myOrderDetail from '@/views/demo/myOrderDetail'
+import dashboard_orderSignList from '@/views/demo/orderSignList'
 /*引入订单详情*/
-import dashboard_myOrderList_detail from '@/views/demo/child/detail.vue'
+import dashboard_myOrderList_detail from '@/views/demo/child/detailOrder'
+/*引入下单页面*/
+import dashboard_myOrderList_create from  '@/views/demo/child/createOrder'
 /*引入订单列表*/
 import dashboard_orderList from '@/views/orderList/orderList'
 /*引入订单图表*/
@@ -66,8 +68,9 @@ let router = new VueRouter({
       iconCls: 'iconfont icon-home', // 图标样式class
       children: [
         {path: '/myorderlist', component: dashboard_myOrderList, name: '我的订单', menuShow: true},
-        {path: '/myorderdetail', component: dashboard_myOrderDetail, name: '订单详情', menuShow: true},
+        {path: '/orderSignList', component: dashboard_orderSignList, name: '待签收', menuShow: true},
         {path:'/myorderlist/orderDetail',component:dashboard_myOrderList_detail},
+        {path:'/myorderlist/createOrder',component:dashboard_myOrderList_create},
       ]
     },
     /*   {
