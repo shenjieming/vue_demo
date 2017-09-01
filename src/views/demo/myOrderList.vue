@@ -68,13 +68,8 @@
         </el-form>
       </el-collapse-item>
     </el-collapse>
-    <el-table :data="orderList"  stripe  border resizable highlight-current-row max-height="500" ref="gridList" @row-click="selectsRow"  @row-dblclick="detail" style="width: 100%">
-      <el-table-column
-      prop="serial" label="序号"  width="60" align="left">
-        <!--label="序"-->
-        <!--type="index"-->
-        <!--width="100"-->
-      </el-table-column>
+    <el-table :data="orderList"  stripe  border resizable highlight-current-row height="500" ref="gridList" @row-click="selectsRow"  @row-dblclick="detail" style="width: 100%">
+      <el-table-column prop="serial" label="序号"  width="80" align="left"></el-table-column>
       <el-table-column prop="sONo" label="订单号" align="center" ></el-table-column>
       <el-table-column label="医院" align="center" >
         <template scope="scope">
@@ -167,6 +162,11 @@
     methods: {
       select:function () {
         const that=this;
+        if(this.queryParams.date){
+          this.queryParams.createDateBegin=this.queryParams.date[0];
+          this.queryParams.createDateEnd=this.queryParams.date[1];
+
+        }
         let httpParams= Object.assign(this.queryParams,this.pagination)
         api.post(API_URL.OMS_API.ORDER.LIST.SALES_MY_ORDER_LIST, httpParams, function (response) {
           for(let [key,value] of  Object.keys(response.list)){

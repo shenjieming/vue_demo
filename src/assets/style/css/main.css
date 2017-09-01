@@ -40,6 +40,9 @@
 .el-input__inner{
   height: 30px;
 }
+.el-input.is-disabled .el-input__inner{
+  color: #000;
+}
 .el-select{
   width: 100%;
 }

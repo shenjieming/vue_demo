@@ -21,7 +21,6 @@ axios.interceptors.request.use( config => {
     vm._data.httpCount++;
     if( vm._data.httpCount==1){
       loadingInstance= Loading.service({target:document.querySelector(".content-wrapper")}  );
-      // Loading.service({target:document.querySelector("section")}  )
     }
   return config;
 },

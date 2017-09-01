@@ -132,3 +132,6 @@ body{
   display: none;
 }
 
+.is-disabled{
+  color:#000000;
+}

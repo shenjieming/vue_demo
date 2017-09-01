@@ -48,6 +48,8 @@ const APIURL={
       BUSINESS_DATA:{
         //经销商代理货主下拉框
         DL_AGENT_OI_LIST: '/businessData/dl/dlAgentOiList',
+        //常用医生列表
+        OFTEN_DOCTOR_LIST: '/businessData/sales/userOftenUseDoctorList',
       }
     },
 
