@@ -7,7 +7,7 @@ import messageCFG from '@/common/message/messageCfg';
 import { Loading } from 'element-ui';
 import Vue from 'vue';
 // import { Message } from 'element-ui';
-const baseUrl='http://192.168.1.135/oms-api-v3';
+const baseUrl=BASE_HTTP_URL;
 const message=new messageCFG();
 var vm = new Vue({
     data:{

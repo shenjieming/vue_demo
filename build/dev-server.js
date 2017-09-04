@@ -4,7 +4,6 @@ var config = require('../config')   //引入config indx
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
-
 var opn = require('opn')   //自动打开浏览器
 var path = require('path')
 var express = require('express') //快速搭建node服务
